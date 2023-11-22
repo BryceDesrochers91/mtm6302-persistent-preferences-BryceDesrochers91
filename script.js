@@ -29,7 +29,7 @@ $form.addEventListener('submit', function(e){
 
     tasks.push($newTask.value)
     $newTask.value = ''
-    buildToDoList()
+    buildPersistentPreferences()
 })
 
 $list.addEventListener('click', function(e){
@@ -39,11 +39,11 @@ $list.addEventListener('click', function(e){
         
     }
     tasks.splice(e.target.dataset.index, 1)
-    buildToDoList()
+    buildPersistentPreferences()
     localStorage.setItem('tasks', JSON.stringify(tasks))
 })
 
 if(localStorage.getItem('tasks')){
     tasks = JSON.parse(localStorage.getItem(tasks))
 }
-buildToDoList()
+buildPersistentPreferences()
