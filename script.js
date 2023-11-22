@@ -11,7 +11,7 @@ let preferences = [
 
 ]
 
-function buildToDoList(){
+function buildPersistentPreferences(){
 
 const html = []
 
