@@ -15,7 +15,7 @@ function buildPersistentPreferences(){
 
 const html = []
 
-for( let i=0; i < tasks.length; i++){
+for( let i=0; i < list.length; i++){
     html.push(`<li class="list-group-item">${tasks[i]}<button class="btn btn-danger">Delete</button></li>`)
 }
     $list.innerHTML = html.join('')
