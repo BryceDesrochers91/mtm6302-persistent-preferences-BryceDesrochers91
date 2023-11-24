@@ -38,12 +38,14 @@ $list.addEventListener('click', function(e){
     if (e.target.classList.contains('btn')) {
         
     }
-    tasks.splice(e.target.dataset.index, 1)
-    buildPersistentPreferences()
-    localStorage.setItem('tasks', JSON.stringify(tasks))
+    // tasks.splice(e.target.dataset.index, 1)
+    // buildPersistentPreferences()
+    // localStorage.setItem('preferences', JSON.stringify())
 })
 
-if(localStorage.getItem('tasks')){
+if(localStorage.getItem('preferences')){
     tasks = JSON.parse(localStorage.getItem(tasks))
 }
 buildPersistentPreferences()
+
+$theme.addEventListener('change', )
