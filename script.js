@@ -48,4 +48,17 @@ if(localStorage.getItem('preferences')){
 }
 buildPersistentPreferences()
 
-$theme.addEventListener('change', )
+  // Event listener for theme changes
+  themeSelect.addEventListener('change', function () {
+    // Update the body theme based on the selected theme
+    const selectedTheme = themeSelect.value;
+    document.body.className = selectedTheme;
+
+    // Save the selected theme to local storage
+    localStorage.setItem('theme', selectedTheme);
+
+    // Update the item list based on the new theme
+    populateItemList(selectedTheme);
+})
+
+buildPersistentPreferences()
