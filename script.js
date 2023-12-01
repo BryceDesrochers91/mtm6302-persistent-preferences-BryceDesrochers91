@@ -1,13 +1,15 @@
 $list = document.getElementById('list')
 $theme = document.getElementById('theme')
 $preferencesPanel = document.getElementById('preferencesPanel')
-
+$form = document.getElementById('form')
 
 
 let preferences = [
-    'Buy Dinner',
-    'Completes assignment',
-    'review class'
+    'Black',
+    'White',
+    'Red',
+    'Green',
+    'Blue'
 
 ]
 
@@ -15,8 +17,8 @@ function buildPersistentPreferences(){
 
 const html = []
 
-for( let i=0; i < list.length; i++){
-    html.push(`<li class="list-group-item">${tasks[i]}<button class="btn btn-danger">Delete</button></li>`)
+for( let i=0; i < preferences.length; i++){
+    html.push(`<li class="list-group-item">${preferences[i]}<button class="btn btn-danger">Delete</button></li>`)
 }
     $list.innerHTML = html.join('')
 
@@ -60,3 +62,6 @@ buildPersistentPreferences()
 })
 
 buildPersistentPreferences()
+function populateItemList(){
+
+}

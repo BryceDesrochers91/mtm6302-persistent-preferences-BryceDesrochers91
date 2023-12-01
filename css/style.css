@@ -1,3 +1,18 @@
 list-group-item li{
     padding: 3rem;
 }
+
+.dark {
+    background-color: black;
+    color: gray;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}
+
+.blue {
+    background-color: lightblue;
+    color: red;
+}
